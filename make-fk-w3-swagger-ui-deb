@@ -5,9 +5,9 @@
 [ ! -d "$LOCAL_DIR" ] && die "$LOCAL_DIR does not exist"
 cd "$LOCAL_DIR"
 
-mkdir -p deb/usr/share/fk-w3-ab-dashboard/
-cp -rf dist/ deb/usr/share/fk-w3-ab-dashboard/
-cp -rf lang/ deb/usr/share/fk-w3-ab-dashboard/
-cp -rf lib/ deb/usr/share/fk-w3-ab-dashboard/
-cp -rf src/ deb/usr/share/fk-w3-ab-dashboard/
+mkdir -p deb/usr/share/fk-w3-swagger-ui/
+cp -rf dist/ deb/usr/share/fk-w3-swagger-ui/
+cp -rf lang/ deb/usr/share/fk-w3-swagger-ui/
+cp -rf lib/ deb/usr/share/fk-w3-swagger-ui/
+cp -rf src/ deb/usr/share/fk-w3-swagger-ui/
 set +x
