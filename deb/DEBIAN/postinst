@@ -1,0 +1,29 @@
+#!/bin/bash -e
+
+PACKAGE=fk-w3-swagger-ui
+FK_USER=fk-w3-website
+FK_GROUP=fk-w3
+FK_UID=3002
+FK_GID=3000
+CMD=$1
+FQHOSTNAME=`hostname -f`
+
+if [ "$CMD" == "configure" ]; then
+
+#    create user and group
+    if ! getent group fk-w3 > /dev/null; then
+    groupadd -g "$FK_GID" $FK_GROUP
+    fi
+
+    if ! getent passwd $FK_UID > /dev/null; then
+        adduser --system --uid $FK_UID --home /usr/share/$PAC --no-create-home \
+        --ingroup fk-w3 --disabled-password --shell /bin/false \
+        $FK_USER
+    fi
+
+#	Restart services
+    sudo /etc/init.d/nginx restart || true
+
+fi
+
+

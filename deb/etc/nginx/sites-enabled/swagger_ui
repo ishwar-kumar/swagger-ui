@@ -1,0 +1,9 @@
+server {
+    listen 9991;
+    server_name localhost;
+
+    root /usr/share/fk-w3-swagger-ui/dist;
+
+    access_log  /var/log/nginx/ab_swagger_ui_access.log;
+    error_log  /var/log/nginx/ab_swagger_ui_error.log;
+}

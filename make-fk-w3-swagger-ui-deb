@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+
+[ -z "$LOCAL_DIR" ] && die "No base dir specified"
+[ ! -d "$LOCAL_DIR" ] && die "$LOCAL_DIR does not exist"
+cd "$LOCAL_DIR"
+
+cp -rf * deb/usr/share/fk-w3-ab-dashboard/
+set +x
