@@ -5,5 +5,6 @@
 [ ! -d "$LOCAL_DIR" ] && die "$LOCAL_DIR does not exist"
 cd "$LOCAL_DIR"
 
+mkdir -p deb/usr/share/fk-w3-ab-dashboard/
 cp -rf * deb/usr/share/fk-w3-ab-dashboard/
 set +x
