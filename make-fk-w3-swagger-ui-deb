@@ -6,5 +6,8 @@
 cd "$LOCAL_DIR"
 
 mkdir -p deb/usr/share/fk-w3-ab-dashboard/
-cp -rf * deb/usr/share/fk-w3-ab-dashboard/
+cp -rf dist/ deb/usr/share/fk-w3-ab-dashboard/
+cp -rf lang/ deb/usr/share/fk-w3-ab-dashboard/
+cp -rf lib/ deb/usr/share/fk-w3-ab-dashboard/
+cp -rf src/ deb/usr/share/fk-w3-ab-dashboard/
 set +x
